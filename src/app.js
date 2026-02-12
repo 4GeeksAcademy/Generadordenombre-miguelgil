@@ -10,23 +10,23 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
 
-const pronoun = ["I", "you", "he", "she", "it", "we", "they"];
-const adj = ["smart","fast","bright","fresh","cool","wild","super","prime"];
-const noun = ["jogger","racoon","hub","lab","zone","spot","flow","loop","wave","nest"];
+const pronouns = ["I", "you", "he", "she", "it", "we", "they"];
+const adjectives = ["smart","fast","bright","fresh","cool","wild","super","prime"];
+const nouns = ["jogger","racoon","hub","lab","zone","spot","flow","loop","wave","nest"];
 
-function nuevaWeb(i, j, k) {
+function newWebDomain(pronounIndex, adjectivesIndex, nounsIndex) {
   const list = document.querySelector("#list");
   const liElement = document.createElement("li");
 
-  liElement.textContent = pronoun[i] + adj[j] + noun[k] + ".com";
+  liElement.textContent = pronouns[pronounIndex] + adjectives[adjectivesIndex] + nouns[nounsIndex] + ".com";
   list.appendChild(liElement);
 }
 
 window.onload = function () {
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < noun.length; k++) {
-        nuevaWeb(i, j, k);
+  for (let i = 0; i < pronouns.length; i++) {
+    for (let j = 0; j < adjectives.length; j++) {
+      for (let k = 0; k < nouns.length; k++) {
+        newWebDomain(i, j, k);
       }
     }
   }
